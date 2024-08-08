@@ -1,3 +1,19 @@
 ------------------Response------------------
-ọmọkunrin = boy
 Pẹ̀lẹ́, ṣé mo lè ran yín lọ́wọ́? = hi
+
+Mo wà dáadáa, ẹ ṣé ọ̀nà yín? = how are you
+Ó dára láti gbọ́ = i'm fine
+Mo dara, o ṣeun fun ibeere = i'm fine and you
+
+Iyẹn dara lati gbọ = i'm good
+Emi naa dara, o ṣeun fun ibeere = i'm good and you
+
+Mo jẹ bot, Emi ko ni orukọ lọwọlọwọ = what is your name?
+Ko Tope = thank you
+
+Mo jẹ bot = what are you
+
+Daju = great
+O dara = no
+
+kilode = shut up

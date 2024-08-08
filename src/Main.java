@@ -4,6 +4,8 @@ import java.util.Map;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.io.File;
 
 // Update file path using
@@ -13,28 +15,56 @@ public class Main {
     public static String word, filePath, line, mergeWord, translatedWord, key;
     public static String totalWord = "";
     public static String[] splitWord;
-    public static boolean notFound;
+    public static boolean notFound, custom, date, time;
+
+    public static String name, buffer;
+
     public static void main(String[] args) {
 
 
-        System.out.print("\nInput a word: ");
+        System.out.print("\nUser: ");
         Scanner translateS = new Scanner(System.in);
         word = translateS.nextLine();
+        word = word.toLowerCase();
+
+        splitWord = word.split(" ");
+        customResponse();
+        date();
+
+        if (custom || date) {
+            runAgain();
+        }
 
         translator(word);
         store();
-        splitWord = word.split(" ");
-
-
         printT();
 
     }
 
+    /*public static void sentenceCase() {
+        splitWord = word.split(" ");
+
+        for (int i = 0; i < splitWord.length; i++) {
+            findKeyByValue(yoruba, splitWord[i]);
+            if (!notFound && i == 0) {
+                translator(splitWord[i]);
+                store();
+                splitWord[i] = key;
+            } if (notFound && i == 0) {
+                translator(splitWord[i+1]);
+                store();
+                splitWord[i+1] = key;
+            } if (i == 0) {
+                mergeWord = splitWord[i] + " " + splitWord[i+1];
+                System.out.println("Translation: " + mergeWord);
+            }
+            //totalWord = totalWord.concat(" ").concat(translatedWord);
+        }
+        System.out.println(totalWord);
+    }*/
 
     public static void translator(String word) {
-        filePath = "..\\Yoruba Translator\\src\\yoruba.txt";
-
-        word = word.toLowerCase();
+        filePath = "..\\Yoruba ChatGPT\\src\\Data.txt";
 
         // Read the file and populate the HashMap
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
@@ -60,7 +90,7 @@ public class Main {
         String key = findKeyByValue(yoruba, word);
         if (key != null) {
             translatedWord = key;
-            System.out.println("\nTranslation: " + key);
+            System.out.println("\nBot: " + key + "\n");
             runAgain();
         } else {
             //System.out.println("Oops! " + word + " is unknown to me. I'm still trying to learn.");
@@ -76,7 +106,7 @@ public class Main {
         if (key != null) {
             translatedWord = key;
         } else {
-            System.out.println("Oops! " + word + " is unknown to me. I'm still trying to learn.");
+            //System.out.println("Oops! " + word + " is unknown to me. I'm still trying to learn.");
             notFound = true;
         }
     }
@@ -97,9 +127,54 @@ public class Main {
         Main.main(call);
     }
 
-    public static void respond() {
-        if ();
+    public static void customResponse() {
+        if (splitWord[0].equals("my") && splitWord[1].equals("name") && splitWord[2].equals("is")) {
+            name = splitWord[3];
+            System.out.println("Ojo dada " + name + " bawo ni o se wa");
+            custom = true;
+        } else if ((splitWord[0].equals("oruko") || splitWord[0].equals("orukọ")) && splitWord[1].equals("mi") && splitWord[2].equals("ni")) {
+            name = splitWord[3];
+            System.out.println("Good day " + name + " how are you?");
+            custom = true;
+        }
+
     }
 
+    public static void date() {
+        LocalDate currentDate = LocalDate.now();
+        if (splitWord[0].equals("what's") && (splitWord[1].equals("today") || splitWord[1].equals("todays") || splitWord[1].equals("today's")) && splitWord[2].equals("date")) {
+            System.out.println("Oni ọjọ jẹ " + currentDate);
+            date = true;
+        } else if (splitWord[0].equals("what") && splitWord[1].equals("is") && (splitWord[2].equals("today") || splitWord[2].equals("todays") || splitWord[2].equals("today's")) && splitWord[3].equals("date")) {
+            System.out.println("Oni ọjọ jẹ " + currentDate);
+            date = true;
+        } else if (splitWord[0].equals("what's") && splitWord[1].equals("the") && splitWord[2].equals("date")) {
+            System.out.println("Oni ọjọ jẹ " + currentDate);
+            date = true;
+        } else if (splitWord[0].equals("what") && splitWord[1].equals("is") && splitWord[2].equals("the") && splitWord[3].equals("date")) {
+            System.out.println("Oni ọjọ jẹ " + currentDate);
+            date = true;
+        } else if (splitWord[0].equals("kini") && (splitWord[1].equals("ojo") || splitWord[1].equals("ọjọ")) && splitWord[2].equals("oni")) {
+            System.out.println("Oni ọjọ jẹ " + currentDate);
+            date = true;
+        } else if (splitWord[0].equals("kini") && (splitWord[1].equals("ojo") || splitWord[1].equals("ọjọ")) && splitWord[2].equals("naa")) {
+            System.out.println("Oni ọjọ jẹ " + currentDate);
+            date = true;
+        }
+    }
+
+    public static void time() {
+        LocalTime currentTime = LocalTime.now();
+        if ((splitWord[0].equals("what's") || splitWord[0].equals("what")) && splitWord[1].equals("the") && splitWord[2].equals("time")) {
+            System.out.println("Akoko ni " + currentTime);
+            time = true;
+        } else if (splitWord[0].equals("what") && splitWord[1].equals("is") && splitWord[2].equals("the") && splitWord[3].equals("time")) {
+            System.out.println("Akoko ni " + currentTime);
+            time = true;
+        } else if (splitWord[0].equals("kini") && splitWord[1].equals("akoko") && splitWord[2].equals("naa")) {
+            System.out.println("Akoko ni " + currentTime);
+            time = true;
+        }
+    }
 
 }
