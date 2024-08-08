@@ -1,5 +1,36 @@
-------------------Response------------------
-Pẹ̀lẹ́, ṣé mo lè ran yín lọ́wọ́? = hi
+-------------Response and Input------------------
+
+Kaabo, bawo ni MO ṣe le ran ọ lọwọ = hi
+Helo Bawo ni o se nse si? = hello
+Mo wa nla ati iwọ = wassup
+Dada ni iwo na nko = what's up
+Mo dara ati iwọ = how are you
+Mo nse rere ati iwo = how are you doing
+Mo jẹ Bot Chat ati pe Emi ko ti yan orukọ kan = what's your name
+Mo jẹ Bot ati pe Emi ko yan orukọ kan = what is your name
+Bẹẹni, inu mi dun = are you happy
+Mo jẹ Bot iwiregbe kan = what are you
+
+Ojo dada = good day
+E kaaro = good morning
+E kaasan = good afternoon
+Ka a ale = good evening
+Ti o dara night, lagun ala = good night
+Ati iwo naa = sweet dreams
+Oru mi dara ati tirẹ = how was your night
+Kabiyesi = good bye
+O dabọ = goodbye
+Ma a ri e laipe = bye
+O ṣeun, Mo n reti lati ri ọ laipẹ = see you later
+
+Beeni = yes
+Rara = no
+Odaju = kay
+
+Bakana fun e = merry christmas
+A ku odun tuntun fun iwo naa = happy new year
+A ku osu tuntun fun iwo naa = happy new month
+E ku ojo isinmi fun iwo naa = happy sunday
 
 Mo wà dáadáa, ẹ ṣé ọ̀nà yín? = how are you
 Ó dára láti gbọ́ = i'm fine
@@ -17,3 +48,8 @@ Daju = great
 O dara = no
 
 kilode = shut up
+
+Bẹẹni, Mo wa ọlọgbọn = are you smart
+
+Rara, Emi ko binu = are you mad
+Ko si, Emi ko irikuri = are you crazy

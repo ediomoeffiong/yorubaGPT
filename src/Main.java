@@ -11,57 +11,44 @@ import java.io.File;
 // Update file path using
 // System.out.println("Absolute path: " + myObj.getAbsolutePath());
 public class Main {
-    public static HashMap<String, String> yoruba = new HashMap<>();
-    public static String word, filePath, line, mergeWord, translatedWord, key;
-    public static String totalWord = "";
-    public static String[] splitWord;
-    public static boolean notFound, custom, date, time;
+    public static HashMap<String, String> data = new HashMap<>();
+    public static String word, filePath, line, translatedWord, key;;
+    public static String[] splitWord, splitWord2;
+    public static boolean notFound, custom, date, time, cases;
 
-    public static String name, buffer;
+    public static String name;
+    public static String buffer = "";
+    public static int i, j = 0;
 
     public static void main(String[] args) {
 
 
-        System.out.print("\nUser: ");
+        System.out.print("\n\nUser: ");
         Scanner translateS = new Scanner(System.in);
         word = translateS.nextLine();
         word = word.toLowerCase();
 
+        System.out.print("\n");
+        System.out.print("Bot: ");
+
         splitWord = word.split(" ");
+        splitWord2 = word.split(", ");
+
+
+        translator(word);
+
+        trySentence();
+
+
+        //custom
         customResponse();
         date();
 
-        if (custom || date) {
-            runAgain();
-        }
 
-        translator(word);
-        store();
-        printT();
+        runAgain();
 
     }
 
-    /*public static void sentenceCase() {
-        splitWord = word.split(" ");
-
-        for (int i = 0; i < splitWord.length; i++) {
-            findKeyByValue(yoruba, splitWord[i]);
-            if (!notFound && i == 0) {
-                translator(splitWord[i]);
-                store();
-                splitWord[i] = key;
-            } if (notFound && i == 0) {
-                translator(splitWord[i+1]);
-                store();
-                splitWord[i+1] = key;
-            } if (i == 0) {
-                mergeWord = splitWord[i] + " " + splitWord[i+1];
-                System.out.println("Translation: " + mergeWord);
-            }
-            //totalWord = totalWord.concat(" ").concat(translatedWord);
-        }
-        System.out.println(totalWord);
-    }*/
 
     public static void translator(String word) {
         filePath = "..\\Yoruba ChatGPT\\src\\Data.txt";
@@ -74,34 +61,28 @@ public class Main {
                 if (parts.length == 2) {
                     String key = parts[0].trim();
                     String value = parts[1].trim();
-                    yoruba.put(key, value);
+                    data.put(key, value);
                 }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-    }
 
-    public static void printT() {
         word = word.toLowerCase();
 
         // Find and print the key for the given word
-        String key = findKeyByValue(yoruba, word);
+        String key = findKeyByValue(data, word);
         if (key != null) {
             translatedWord = key;
-            System.out.println("\nBot: " + key + "\n");
-            runAgain();
+            System.out.print(key + " ");
         } else {
             //System.out.println("Oops! " + word + " is unknown to me. I'm still trying to learn.");
             notFound = true;
-            runAgain();
         }
-    }
 
-    public static void store() {
         // Find and print the key for the given word
-        String key = findKeyByValue(yoruba, word);
+        key = findKeyByValue(data, word);
         notFound = false;
         if (key != null) {
             translatedWord = key;
@@ -110,6 +91,8 @@ public class Main {
             notFound = true;
         }
     }
+
+
     // Method to find the key for a given value
     public static String findKeyByValue(HashMap<String, String> map, String value) {
         for (Map.Entry<String, String> entry : map.entrySet()) {
@@ -123,11 +106,35 @@ public class Main {
     }
 
     public static void runAgain() {
+        if (notFound && !cases) {
+            trySentence();
+        }
         String[] call = {"call"};
         Main.main(call);
     }
 
+    public static void trySentence() {
+        if (key == null) {
+            for (i = 0; i < splitWord.length; i++) {
+                translator(splitWord[i]);
+            }
+
+        }
+
+        /*if (key != null) {
+            for (int j = 0; j < splitWord2.length; j++) {
+                translator(splitWord2[j]);
+            }
+        }*/
+
+    }
+
     public static void customResponse() {
+        /*if (i == 0) {
+            j = 0;
+        } else {
+            j = i;
+        }*/
         if (splitWord[0].equals("my") && splitWord[1].equals("name") && splitWord[2].equals("is")) {
             name = splitWord[3];
             System.out.println("Ojo dada " + name + " bawo ni o se wa");
@@ -137,7 +144,8 @@ public class Main {
             System.out.println("Good day " + name + " how are you?");
             custom = true;
         }
-
+        cases = true;
+        runAgain();
     }
 
     public static void date() {
@@ -161,6 +169,8 @@ public class Main {
             System.out.println("Oni ọjọ jẹ " + currentDate);
             date = true;
         }
+        cases = true;
+        runAgain();
     }
 
     public static void time() {
@@ -175,6 +185,8 @@ public class Main {
             System.out.println("Akoko ni " + currentTime);
             time = true;
         }
+        cases = true;
+        runAgain();
     }
 
 }
