@@ -11,27 +11,6 @@ Mo jẹ Bot ati pe Emi ko yan orukọ kan = what is your name
 Bẹẹni, inu mi dun = are you happy
 Mo jẹ Bot iwiregbe kan = what are you
 
-Ojo dada = good day
-E kaaro = good morning
-E kaasan = good afternoon
-Ka a ale = good evening
-Ti o dara night, lagun ala = good night
-Ati iwo naa = sweet dreams
-Oru mi dara ati tirẹ = how was your night
-Kabiyesi = good bye
-O dabọ = goodbye
-Ma a ri e laipe = bye
-O ṣeun, Mo n reti lati ri ọ laipẹ = see you later
-
-Beeni = yes
-Rara = no
-Odaju = kay
-
-Bakana fun e = merry christmas
-A ku odun tuntun fun iwo naa = happy new year
-A ku osu tuntun fun iwo naa = happy new month
-E ku ojo isinmi fun iwo naa = happy sunday
-
 Mo wà dáadáa, ẹ ṣé ọ̀nà yín? = how are you
 Ó dára láti gbọ́ = i'm fine
 Mo dara, o ṣeun fun ibeere = i'm fine and you
@@ -53,3 +32,178 @@ Bẹẹni, Mo wa ọlọgbọn = are you smart
 
 Rara, Emi ko binu = are you mad
 Ko si, Emi ko irikuri = are you crazy
+
+    [Daily Greetings]
+Ojo dada = good day
+E kaaro = good morning
+E kaasan = good afternoon
+Ka a ale = good evening
+Ti o dara night, lagun ala = good night
+Ati iwo naa = sweet dreams
+Oru mi dara ati tirẹ = how was your night
+O dabọ = good bye
+Ma a ri e laipe = bye
+O ṣeun, Mo n reti lati ri ọ laipẹ = see you later
+
+    [Season Greetings]
+E ku osu tuntun = happy new month
+E ku odun eku iyedun = happy new year
+A ku odun ajinde = happy easter
+Ikini odun keresimesi = merry Christmas
+E ku ojo isinmi fun iwo naa = happy sunday
+
+    [Basic Responses]
+Beeni = yes
+Rara = no
+Odaju = okay
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------Responds in English------------------------------------
+
+    [Daily Greetings]
+Hello = pele o
+Hello friend = pẹlẹ o
+Hi = hi
+Good day = ojo dada
+Good morning = e kaaro
+Good afternoon = e kaasan
+Good evening = ka a ale
+Good night = kasun layọ o
+My night was fine and yours? = bawo ni ale re
+Thank you = kaabo
+Sweet dreams = ala dun
+Bye = o dabọ
+Goodbye = o dabo
+bye = ma a ri e laipe
+
+    [Season Greetings]
+Happy new month to you too = e ku osu tuntun
+Happy new year to you too = e ku odun eku iyedun
+Happy Easter to you too = a ku odun ajinde
+Merry Christmas to you too = ikini odun keresimesi
+Happy Sunday to you too = e ku ojo isinmi
+
+    [How was your day]
+My day was fine and yours? = bawo ni ojo re
+My day was fine = bawo ni ọjọ rẹ
+That's good to hear = ti mi dara
+You're welcome = mi dara, o ṣeun
+
+    [How do you do]
+I'm doing good and you = bawo ni o nse si
+Thank God = emi naa nse rere
+Morning = owuro
+Good morning = owurọ
+
+    [Pleased to meet you]
+I'm pleased to meet you too = inu mi dun lati pade yin
+
+    [How are you]
+I'm fine = bawo ni o se wa
+
+    [That's good to hear]
+Yeah = iyẹn dara lati gbọ
+Yh, thanks = iyen dara lati gbo
+
+    [Basic Responses]
+Yes = bẹẹni
+That's right = beeni
+No = rara
+Yh = o dara

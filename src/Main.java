@@ -18,12 +18,18 @@ public class Main {
 
     public static String name;
     public static String buffer = "";
-    public static int i, j = 0;
+    public static int i, j, k = 0;
 
     public static void main(String[] args) {
 
-
-        System.out.print("\n\nUser: ");
+        if (k == 0) {
+            System.out.println("----------Welcome to Eddy's Yoruba Chat Bot----------");
+            System.out.println("Hi, what do you want me to do for you.");
+            System.out.println("At the moment, I can only respond to greetings. Please input your greetings below and I'll respond");
+            k++;
+        }
+        System.out.println("\n");
+        System.out.print("User: ");
         Scanner translateS = new Scanner(System.in);
         word = translateS.nextLine();
         word = word.toLowerCase();
@@ -114,11 +120,10 @@ public class Main {
     }
 
     public static void trySentence() {
-        if (key == null) {
+        if (key != null) {
             for (i = 0; i < splitWord.length; i++) {
                 translator(splitWord[i]);
             }
-
         }
 
         /*if (key != null) {
