@@ -38,6 +38,6 @@ Create a new Pull Request.
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 # Acknowledgements
-Special thanks to all contributors and the Yoruba language community for their invaluable input and support.
+Special thanks to all contributors, myself, and the Yoruba language community for their invaluable input and support.
 
 Thank you
